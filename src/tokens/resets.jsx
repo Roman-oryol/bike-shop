@@ -16,6 +16,10 @@ const GlobalResets = createGlobalStyle`
     box-shadow: none;
   }
 
+  :root {
+    font-size: 62.5%;
+  }
+
   body {
     font-family: ${Font.COMMISSIONER};
     font-weight: 400;
