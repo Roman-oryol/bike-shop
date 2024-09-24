@@ -73,15 +73,15 @@ const ButtonColorToCSS = {
   `,
 };
 
-const Button = styled.button.attrs(({ size, variant, color, type }) => ({
+const Button = styled.button.attrs(({ $size, $variant, $color, type }) => ({
   type: type || 'button',
-  size: size || 'medium',
-  variant: variant || ButtonVariant.FILLED,
-  color: color || ButtonColor.ORANGE,
+  $size: $size || 'medium',
+  $variant: $variant || ButtonVariant.FILLED,
+  $color: $color || ButtonColor.ORANGE,
 }))`
-  ${({ size }) => ButtonSizeToCSS[size]};
-  ${({ color }) => ButtonColorToCSS[color]};
-  ${({ variant }) => ButtonVariantToCSS[variant]};
+  ${({ $size }) => ButtonSizeToCSS[$size]};
+  ${({ $color }) => ButtonColorToCSS[$color]};
+  ${({ $variant }) => ButtonVariantToCSS[$variant]};
 
   border-width: 1px;
   border-style: solid;
